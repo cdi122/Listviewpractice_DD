@@ -9,4 +9,4 @@ class StudentAdapter(
     val mContext : Context,
     val resId : Int,
     val mList : ArrayList<Student>) : ArrayAdapter<Student>(mContext, resId, mList) {
-}
+}ㅌㅌㅌㅊㅌㅊㅌ
