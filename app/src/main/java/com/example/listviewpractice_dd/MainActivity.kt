@@ -3,6 +3,7 @@ package com.example.listviewpractice_dd
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.annotation.ArrayRes
 import com.example.listviewpractice_dd.adapters.StudentAdapter
 import com.example.listviewpractice_dd.datas.Student
@@ -30,5 +31,12 @@ class MainActivity : AppCompatActivity() {
 
         studentListview.adapter = mAdapter
 
+        studentListview.setOnItemClickListener { parent, view, position, id ->
+            val clickedStudent = mStudentList[position]
+            Toast.makeText(this, "${clickedStudent.name} 이 클릭됨", Toast.LENGTH_SHORT).show()
+
+
+
+        }
     }
 }
