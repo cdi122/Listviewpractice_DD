@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 
             mAdapter.notifyDataSetChanged()
 
-            return@setOnItemLongClickListener false
+            return@setOnItemLongClickListener true
 
 
         }
