@@ -35,8 +35,6 @@ class MainActivity : AppCompatActivity() {
             val clickedStudent = mStudentList[position]
             Toast.makeText(this, "${clickedStudent.name} 이 클릭됨", Toast.LENGTH_SHORT).show()
 
-
-
         }
     }
 }
