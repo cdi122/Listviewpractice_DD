@@ -2,12 +2,15 @@ package com.example.listviewpractice_dd
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.annotation.ArrayRes
 import com.example.listviewpractice_dd.adapters.StudentAdapter
 import com.example.listviewpractice_dd.datas.Student
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.student_list_item.*
+import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,6 +29,14 @@ class MainActivity : AppCompatActivity() {
         mStudentList.add( Student("박철수", 1995))
         mStudentList.add( Student("장소영", 1988))
         mStudentList.add( Student("이하이", 2000))
+
+        for (std in mStudentList) {
+            Log.d("학생이름", std.name)
+        }
+        for (i in 0 until 5) {
+            Log.d("숫자", i.toString())
+        }
+
 
         mAdapter = StudentAdapter(this, R.layout.student_list_item, mStudentList)
 
